@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 - Catequesis</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  
+    <style>
+        .oracion {
+            text-align: center; /* Centra el texto horizontalmente */
+            margin-top: 50px; /* Añade un espacio superior para separar del borde superior */
+        }
+        .oracion {
+            text-align: center; /* Centra el texto horizontalmente */
+            margin-top: 50px; /* Añade un espacio superior para separar del borde superior */
+        }
+        .oculto {
+            display: none; /* Oculta el texto largo inicialmente */
+        }
+        .leer-mas {
+            cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+            color: blue; /* Cambia el color del texto */
+        }
+        /* Estilo CSS */
+        .contenedor {
+            border: 2px solid #000; /* Grosor del borde y color */
+            padding: 20px; /* Espacio interno para que el texto no esté pegado al borde */
+            width: 300px; /* Ancho del contenedor */
+            margin: 0 auto; /* Centrar el contenedor horizontalmente */
+        }
+    </style>
+    <div id="contenido">
+        <section id="clase1">
+    
+            <div class="contenedor">
+                <h2>OBJETIVO</h2>
+                <p>Que los jóvenes identifiquen y persigan su yo verdadero y asuman convenientemente los otros “yo” como accidentes o circunstancias que suelen ser destructivos de una personalidad madura y armoniosa.</p>
+            </div>
+            <!-- Contenido específico de la clase 1 -->
+            <div class="oracion">
+                <h2>ORACIÓN: Salmo 139</h2>
+                <div class="texto-corto">
+                    <p class="parrafo">Señor, tú que me sondeas y me conoces, tú sabes si me siento o me levanto; de lejos que percibes lo que pienso, te das cuenta si camino o si descanso, y todos mis pasos te son familiares.</p>
+                </div>
+                <div class="texto-largo oculto">
+                    <p class="parrafo">Antes que la palabra esté en mi lengua, tú, Señor, la conoces plenamente; me rodeas por detrás y por delante y tienes puesta tu mano sobre mí; una ciencia tan admirable me sobrepasa: es tan alta que no puedo alcanzarla.</p>
+                    
+                    <p class="parrafo">¿A dónde iré para estar lejos de tu espíritu? ¿A dónde huiré de tu presencia? Si subo al cielo, allí estás tú; si me tiendo en el Abismo, estás presente. Si tomara las alas de la aurora y fuera a habitar en los confines del mar, también allí me llevaría tu mano y me sostendría tu derecha. Si dijera: “¡Que me cubran las tinieblas y la luz sea como la noche a mi alrededor!”, las tinieblas no serían oscuras para ti y la noche sería clara como el día.</p>
+                
+                    <p class="parrafo">Tú creaste mis entrañas, me plasmaste en el seno de mi madre: te doy gracias porque fui formado de manera tan admirable. ¡Qué maravillosas son tus obras!</p>
+                
+                    <p class="parrafo">Tú conocías hasta el fondo de mi alma y nada de mi ser se te ocultaba, cuando yo era formado en lo secreto, cuando era tejido en lo profundo de la tierra. Tus ojos ya veían mis acciones, todas ellas estaban en tu Libro; mis días estaban escritos y señalados, antes de que uno solo de ellos existiera.</p>
+                
+                    <p class="parrafo">¡Qué difíciles son para mí tus designios! ¡Y qué inmenso, Dios mío, es el conjunto de ellos! Si me pongo a contarlos, son más que la arena; y si terminara de hacerlo, aún entonces seguiría a tu lado.</p>
+                </div>
+                
+                
+            </div>
+            <p class="leer-mas" onclick="mostrarTexto()">Leer más...</p>
+            </div>
+            <!-- Puedes añadir imágenes u otros recursos aquí -->
+            <a href = "AsiSoyYo.html" class="boton-reflexion">Reflexión personal: ¿Soy yo?</a>
+
+            <a href="preguntas.html" class="boton-preguntas">Responde las siguientes preguntas</a>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        function mostrarTexto() {
+            var textoLargo = document.querySelector('.texto-largo');
+            var leerMas = document.querySelector('.leer-mas');
+
+            if (textoLargo.style.display === 'none') {
+                textoLargo.style.display = 'block';
+                leerMas.textContent = 'Leer menos';
+            } else {
+                textoLargo.style.display = 'none';
+                leerMas.textContent = 'Leer más...';
+            }
+        }
+    </script>
+</body>
+</html>
+.

@@ -1,0 +1,105 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #f3f3f3, #e6e6e6);
+}
+
+/* Estilos para el contenido */
+#contenido {
+  padding: 40px;
+}
+
+/* Estilos para las preguntas */
+#preguntas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#preguntas li {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el texto */
+.texto {
+  text-align: justify;
+}
+
+/* Estilos para los campos editables */
+div[contenteditable="true"] {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+div[contenteditable="true"]:focus {
+  border-color: #007bff;
+}
+
+/* Estilos para los títulos */
+h4 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+/* Estilos para el botón de guardar respuestas */
+button, .boton-regresar {
+  display: inline-block; /* Muestra el botón en línea */
+  padding: 12px 24px; /* Ajusta el relleno del botón */
+  background-color: #0000FF; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  text-decoration: none; /* Elimina el subrayado del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 10px; /* Agrega esquinas redondeadas al botón */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  font-size: 18px; /* Tamaño de la fuente del botón */
+  margin-top: 20px; /* Ajusta la distancia desde la parte superior */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-weight: bold; /* Peso de la fuente del botón */
+  text-align: center; /* Alinea el texto en el centro */
+  vertical-align: middle; /* Centra verticalmente */
+}
+
+/* Estilos para el efecto hover en el botón */
+button:hover, .boton-regresar:hover {
+  background-color: #FF0000; /* Color de fondo más claro al pasar el cursor */
+  transform: translateY(-2px); /* Desplaza ligeramente hacia arriba */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Reducir el tamaño de fuente para dispositivos móviles */
+  }
+
+  #contenido {
+    padding: 20px; /* Reducir el espacio de relleno para dispositivos móviles */
+  }
+
+  div[contenteditable="true"] {
+    font-size: 16px; /* Reducir el tamaño de fuente de los campos editables para dispositivos móviles */
+    padding: 10px; /* Reducir el espacio de relleno de los campos editables para dispositivos móviles */
+  }
+
+  h4 {
+    font-size: 18px; /* Reducir el tamaño de fuente de los títulos para dispositivos móviles */
+    margin-top: 15px; /* Reducir el margen superior de los títulos para dispositivos móviles */
+  }
+
+  button, .boton-regresar {
+    padding: 10px 20px; /* Reducir el espacio de relleno del botón para dispositivos móviles */
+    font-size: 16px; /* Reducir el tamaño de fuente del botón para dispositivos móviles */
+    margin-top: 15px; /* Reducir el margen superior del botón para dispositivos móviles */
+  }
+}

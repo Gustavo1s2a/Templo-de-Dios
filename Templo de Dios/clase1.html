@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 - Catequesis</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  
+    <style>
+        .oracion {
+            text-align: center; /* Centra el texto horizontalmente */
+            margin-top: 50px; /* Añade un espacio superior para separar del borde superior */
+        }
+        .oracion {
+            text-align: center; /* Centra el texto horizontalmente */
+            margin-top: 50px; /* Añade un espacio superior para separar del borde superior */
+        }
+        .oculto {
+            display: none; /* Oculta el texto largo inicialmente */
+        }
+        .leer-mas {
+            cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+            color: blue; /* Cambia el color del texto */
+        }
+    </style>
+    <div id="contenido">
+        <section id="clase1">
+            <h2>MI PRESENTACION</h2>
+            <p class= "texto" >Con este tema, comenzamos nuestra catequesis en vistas del sacramento de la confirmación. Nos interesa conocerte, al menos un poquito.</p>
+            <p class= "texto">Te pedimos que desarolles este ejercicio con seriedad y responsabilidad. Te invito a participar en los encuentros semanales con tus catequistas. Para iniciar dirígete al Señor que está siempre contigo.</p>
+            <!-- Contenido específico de la clase 1 -->
+            <div class="oracion">
+                <h2>ORACIÓN</h2>
+                <div class="texto-corto">
+                    <p class="parrafo">Señor, tú me sondeas y me conoces;<br>
+                    me conoces cuando me siento o me levanto,<br>
+                    de lejos penetras mis pensamientos;<br>
+                    distingues mi camino y mi descanso,<br>
+                    todas mis sendas te son familiares</p>
+                </div>
+
+                <div class="texto-largo oculto">
+                    <p class="parrafo">No ha llegado la palabra a mi lengua,<br>
+                    y ya, Señor, te la sabes toda.<br>
+                    Me estrechas detrás y delante,<br>
+                    me cubres con tu palma.<br>
+                    Tanto saber me sobrepasa,<br>
+                    es sublime, y no lo abarco.</p>
+
+                    <p class = "parrafo">¿Adónde iré lejos de tu aliento,<br>
+                    adónde escaparé de tu mirada?<br>
+                    Si escalo el cielo, allí estás tu;<br>
+                    Si me acuesto en el abismo, allí te encuentro;<br>
+                    si vuelo hasta el margen de la aurora,<br>
+                    si emigro hasta el confín del mar,<br>
+                allí me alcanzará tu izquierda.<br>
+                me agarrará tu derecha.</p>
+
+                <p class = "parrafo">Si digo: "que al menos la tiniebla me encubra<br>
+                que la luz se haga noche en torno a mí",<br>
+                ni la tiniebla es oscura para ti,<br>
+                la noche es clara como el día.</p>
+
+                <p class = "parrafo">Tú has creado mis entrañas,<br>
+                me has tejido en el seno materno.<br>
+                Te doy gracias, porque son admirables tus obras;<br>
+                conocías hasta el fondo de mi alma,<br>
+                no desconocías mi organismo.</p>
+
+                <p class = "parrafo">Cuando, en lo oculto, me iba formando,<br>
+                y entretejiendo en lo profundo de la tierra,<br>
+                tus ojos veían mis acciones,<br>
+                se escribían todas en tu libro;<br>
+                calculados estaban mis días<br>
+                antes que llegase el primero.</p>
+
+                <p class = "parrafo">Señor, sondéame y conoce mi corazón,<br>
+                ponme a prueba y conoce mis sentimientos,<br>
+                mira si mi camino se desvía,<br>
+                guíame por el camino eterno</p>
+                
+            </div>
+            <p class="leer-mas" onclick="mostrarTexto()">Leer más...</p>
+            </div>
+            <!-- Puedes añadir imágenes u otros recursos aquí -->
+            <a href = "AsiSoyYo.html" class="boton-reflexion">Reflexión personal: ¿Soy yo?</a>
+
+            <a href="preguntas.html" class="boton-preguntas">Responde las siguientes preguntas</a>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        function mostrarTexto() {
+            var textoLargo = document.querySelector('.texto-largo');
+            var leerMas = document.querySelector('.leer-mas');
+
+            if (textoLargo.style.display === 'none') {
+                textoLargo.style.display = 'block';
+                leerMas.textContent = 'Leer menos';
+            } else {
+                textoLargo.style.display = 'none';
+                leerMas.textContent = 'Leer más...';
+            }
+        }
+    </script>
+</body>
+</html>
+.

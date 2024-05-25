@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas - Clase 1</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  
+
+    <div id="contenido">
+        <section id="preguntas">
+
+            <ul>
+                <li>
+                    <label for="pregunta1">¿Cómo te llamas?</label><br>
+                    <div contenteditable="true" id="respuesta1"></div>
+                </li>
+                <li>
+                    <label for="pregunta2">¿Quién eligió tu nombre?</label><br>
+                    <div contenteditable="true" id="respuesta2"></div>
+                </li>
+                <li>
+                    <label for="pregunta3">¿Por qué eligieron para ti ese nombre?</label><br>
+                    <div contenteditable="true" id="respuesta3"></div>
+                </li>
+                <li>
+                    <label for="pregunta4">¿Te gusta tu nombre?¿Por qué?</label><br>
+                    <div contenteditable="true" id="respuesta4"></div>
+                </li>
+
+            <li>
+                <label for="pregunta5">¿Cuál es tu fecha y año de nacimiento?</label><br>
+                <div contenteditable="true" id="respuesta5"></div>
+                
+            </li>
+            <li>
+                <label for="pregunta6">¿Sabes, en qué lugar y a qué hora naciste?</label><br>
+                <div contenteditable="true" id="respuesta6"></div>
+            </li>
+            <li>
+                <label for="pregunta7">¿Qué es lo que menos te gusta de ti?</label><br>
+                <div contenteditable="true" id="respuesta7"></div>
+            </li>
+            <li>
+                <label for="pregunta8">¿Qué estás estudiando? O ¿A qué actividad te dedicas?</label><br>
+                <div contenteditable="true" id="respuesta8"></div>
+            </li>
+            <li>
+                <label for="pregunta9">¿Qué sueños o anhelos persigues? </label><br>
+                <div contenteditable="true" id="respuesta9"></div>
+            </li>
+            <li>
+                <label for="pregunta10">¿Qué deporte u otra actividad deportiva practicas?</label><br>
+                <div contenteditable="true" id="respuesta10"></div>
+            </li>
+            <li>
+                <label for="pregunta11">Un amigo o amiga que prefieres</label><br>
+                <div contenteditable="true" id="respuesta11"></div>
+            </li>
+            <li>
+                <label for="pregunta12">Lo que no aceptas de las personas</label><br>
+                <div contenteditable="true" id="respuesta12"></div>
+            </li>
+
+        <li>
+            <label for="pregunta13">Sinceramente, ¿deseas tú, libremente, realizar este tiempo de catequesis?</label><br>
+            <div contenteditable="true" id="respuesta13"></div>
+            
+        </li>
+        <li>
+            <label for="pregunta14">¿Por qué quieres hacerlo?</label><br>
+            <div contenteditable="true" id="respuesta14"></div>
+        </li>
+        <li>
+            <label for="pregunta15">En fin, ¿Cuál es tu relación con Dios?, ¿Qué piensas de Él? ¿Cómo lo ímaginas?</label><br>
+            <div contenteditable="true" id="respuesta15"></div>
+        </li>
+        </ul>
+        <h4>RECUERDA: Has nacido para hacer cosas grandes en este mundo, pero esto depende de ti.
+            
+        </h4>
+        </section>
+        <button onclick="guardarRespuestas()">Guardar respuestas</button>
+    </div>
+    
+
+    <!-- Botón para guardar las respuestas -->
+
+
+    <!-- Enlace para regresar a la clase -->
+
+    <script>
+        // Función para guardar las respuestas en el almacenamiento local del navegador
+        function guardarRespuestas() {
+            var respuesta1 = document.getElementById("respuesta1").innerHTML;
+            var respuesta2 = document.getElementById("respuesta2").innerHTML;
+            var respuesta3 = document.getElementById("respuesta3").innerHTML;
+            var respuesta4 = document.getElementById("respuesta4").innerHTML;
+            var respuesta5 = document.getElementById("respuesta5").innerHTML;
+            var respuesta6 = document.getElementById("respuesta6").innerHTML;
+            var respuesta7 = document.getElementById("respuesta7").innerHTML;
+            var respuesta8 = document.getElementById("respuesta8").innerHTML;
+            var respuesta9 = document.getElementById("respuesta9").innerHTML;
+            var respuesta10 = document.getElementById("respuesta10").innerHTML;
+            var respuesta11 = document.getElementById("respuesta11").innerHTML;
+            var respuesta12 = document.getElementById("respuesta12").innerHTML;
+            var respuesta13 = document.getElementById("respuesta13").innerHTML;
+            var respuesta14 = document.getElementById("respuesta14").innerHTML;
+            var respuesta15 = document.getElementById("respuesta15").innerHTML;
+
+            localStorage.setItem("respuesta1", respuesta1);
+            localStorage.setItem("respuesta2", respuesta2);
+
+            localStorage.setItem("respuesta3", respuesta3);
+            localStorage.setItem("respuesta4", respuesta4);
+
+
+            localStorage.setItem("respuesta5", respuesta5);
+            localStorage.setItem("respuesta6", respuesta6);
+
+            localStorage.setItem("respuesta7", respuesta7);
+            localStorage.setItem("respuesta8", respuesta8);
+
+
+            localStorage.setItem("respuesta9", respuesta9);
+            localStorage.setItem("respuesta10", respuesta10);
+
+            localStorage.setItem("respuesta11", respuesta11);
+            localStorage.setItem("respuesta12", respuesta12);
+
+
+            localStorage.setItem("respuesta13", respuesta13);
+            localStorage.setItem("respuesta14", respuesta14);
+
+            localStorage.setItem("respuesta15", respuesta15);
+
+            // Agregar una alerta para indicar que las respuestas se han guardado
+            alert("Respuestas guardadas correctamente.");
+        }
+
+        // Función para cargar las respuestas desde el almacenamiento local (puede ejecutarse al cargar la página)
+        function cargarRespuestas() {
+            var respuesta1 = localStorage.getItem("respuesta1");
+            var respuesta2 = localStorage.getItem("respuesta2");
+            var respuesta3 = localStorage.getItem("respuesta3");
+            var respuesta4 = localStorage.getItem("respuesta4");
+            var respuesta5 = localStorage.getItem("respuesta5");
+            var respuesta6 = localStorage.getItem("respuesta6");
+            var respuesta7 = localStorage.getItem("respuesta7");
+            var respuesta8 = localStorage.getItem("respuesta8");
+            var respuesta9 = localStorage.getItem("respuesta9");
+            var respuesta10 = localStorage.getItem("respuesta10");
+            var respuesta11 = localStorage.getItem("respuesta11");
+            var respuesta12 = localStorage.getItem("respuesta12");
+            var respuesta13 = localStorage.getItem("respuesta13");
+            var respuesta14 = localStorage.getItem("respuesta14");
+            var respuesta15 = localStorage.getItem("respuesta15");
+
+            document.getElementById("respuesta1").innerHTML = respuesta1;
+            document.getElementById("respuesta2").innerHTML = respuesta2;
+
+            document.getElementById("respuesta3").innerHTML = respuesta3;
+            document.getElementById("respuesta4").innerHTML = respuesta4;
+
+            document.getElementById("respuesta5").innerHTML = respuesta5;
+            document.getElementById("respuesta6").innerHTML = respuesta6;
+
+            document.getElementById("respuesta7").innerHTML = respuesta7;
+            document.getElementById("respuesta8").innerHTML = respuesta8;
+
+            document.getElementById("respuesta9").innerHTML = respuesta9;
+            document.getElementById("respuesta10").innerHTML = respuesta10;
+
+            document.getElementById("respuesta11").innerHTML = respuesta11;
+            document.getElementById("respuesta12").innerHTML = respuesta12;
+
+            document.getElementById("respuesta13").innerHTML = respuesta13;
+            document.getElementById("respuesta14").innerHTML = respuesta14;
+
+            document.getElementById("respuesta15").innerHTML = respuesta15;
+        }
+       
+
+        // Llamar a la función cargarRespuestas al cargar la página
+        window.onload = cargarRespuestas;
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <h3>PARA LA REFLEXIÓN PERSONAL</h3>
+    <h2>TEMA ASÍ SOY YO</h2>
+    <div id="contenido">
+        <section id="preguntas">
+        <ul>
+            <li>
+                <label for="pregunta1">Según tu CARÁCTER, ¿Quién eres tú?</label><br>
+                <div contenteditable="true" id="respuesta16"></div>
+            </li>
+            <li>
+                <label for="pregunta2">De acuerdo a las CUALIDADES que tienes, ¿Quién eres tú?</label><br>
+                <div contenteditable="true" id="respuesta17"></div>
+            </li>
+            <li>
+                <label for="pregunta3">De acuerdo a los DEFECTOS que tienes, ¿Quién eres tú?</label><br>
+                <div contenteditable="true" id="respuesta18"></div>
+            </li>
+            <li>
+                <label for="pregunta4">De acuerdo a la FE que tienes, ¿Quién eres tú?</label><br>
+                <div contenteditable="true" id="respuesta19"></div>
+            </li>
+            <button onclick="guardarRespuestas()">Guardar respuestas</button>
+        </ul>
+    </div>
+
+    <!-- Botón para guardar las respuestas -->
+ 
+
+    <!-- Enlace para regresar a la clase -->
+
+    
+    <script>
+        // Función para guardar las respuestas en el almacenamiento local del navegador
+        function guardarRespuestas() {
+            var respuesta16 = document.getElementById("respuesta16").innerHTML;
+            var respuesta17 = document.getElementById("respuesta17").innerHTML;
+            var respuesta18 = document.getElementById("respuesta18").innerHTML;
+            var respuesta19 = document.getElementById("respuesta19").innerHTML;
+           
+            localStorage.setItem("respuesta16", respuesta16);
+            localStorage.setItem("respuesta17", respuesta17);
+
+            localStorage.setItem("respuesta18", respuesta18);
+            localStorage.setItem("respuesta19", respuesta19);
+
+
+        
+            // Agregar una alerta para indicar que las respuestas se han guardado
+            alert("Respuestas guardadas correctamente.");
+        }
+
+        // Función para cargar las respuestas desde el almacenamiento local (puede ejecutarse al cargar la página)
+        function cargarRespuestas() {
+            var respuesta16 = localStorage.getItem("respuesta16");
+            var respuesta17 = localStorage.getItem("respuesta17");
+            var respuesta18 = localStorage.getItem("respuesta18");
+            var respuesta19 = localStorage.getItem("respuesta19");
+            
+
+            document.getElementById("respuesta16").innerHTML = respuesta16;
+            document.getElementById("respuesta17").innerHTML = respuesta17;
+
+            document.getElementById("respuesta18").innerHTML = respuesta18;
+            document.getElementById("respuesta19").innerHTML = respuesta19;
+
+        }
+       
+
+        // Llamar a la función cargarRespuestas al cargar la página
+        window.onload = cargarRespuestas;
+    </script>
+
+</body>
+</html>
